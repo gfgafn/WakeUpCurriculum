@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../../common/fonts/icomoon.eot?v4pd0q");
+  src: url("../../common/fonts/icomoon.eot?v4pd0q#iefix")
+      format("embedded-opentype"),
+    url("../../common/fonts/icomoon.ttf?v4pd0q") format("truetype"),
+    url("../../common/fonts/icomoon.woff?v4pd0q") format("woff"),
+    url("../../common/fonts/icomoon.svg?v4pd0q#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-redo2:before {
+  content: "\e968";
+}
+.icon-list2:before {
+  content: "\e9bb";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-arrow-down:before {
+  content: "\ea36";
+}
+
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0);
+}
+.header ul {
+  flex: 1;
+  list-style: none;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header ul li:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header ul li:nth-child(2) {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.header ul li:nth-child(2) span {
+  margin: 2% 5% 0 0
+}
+.header div {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  font-size: 1.6rem;
+}
+.header div span {
+  display: inline-block;
+  margin: auto 6%;
+}
