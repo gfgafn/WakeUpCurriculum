@@ -1,0 +1,145 @@
+.courseTable {
+  margin-top: 14%;
+}
+table {
+  /* border: 1px solid purple; */
+  width: 100%;
+}
+thead th:nth-child(1) {
+  width: 0%;
+  /* background-color: rgb(245, 109, 109); */
+}
+tbody td {
+  text-align: center;
+}
+thead th:nth-child(n + 2) {
+  width: 10%;
+  /* background-color: rgb(89, 218, 38); */
+}
+
+.schedule {
+  font-weight: 600;
+}
+.schedule p:nth-child(1) {
+  font-weight: 700;
+}
+tbody tr td:nth-child(1) {
+    font-weight: 600;
+}
+tbody tr td:nth-child(1) p:nth-child(1) {
+    font-weight: 700;
+}
+.course {
+  border-radius: 5px;
+  background-color: #ff4952;
+  color: #fff;
+}
+.courseDetail {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+.courseDetail.active {
+  visibility: visible;
+}
+.courseDetail article {
+  width: 70%;
+  height: 60%;
+  margin: 35% auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+.courseDetail article div:nth-child(1) {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* X号图标 */
+.icon-cross:before {
+  content: "\ea0f";
+  font-weight: 100;
+  font-size: 0.6rem;
+  color: #757575;
+}
+/* 周数图标 */
+.icon-calendar:before {
+  content: "\e953";
+  color: #16ad9e;
+}
+/* 节数图标 */
+.icon-clock:before {
+  content: "\e94e";
+  color: #ffa722;
+}
+/* 授课老师图标 */
+.icon-user-tie:before {
+  content: "\e976";
+  color: #1571d6;
+}
+/* 上课地点图标 */
+.icon-location2:before {
+  content: "\e948";
+  color: #f53d3d;
+}
+.courseDetail article div:nth-child(1) span:nth-child(1) {
+  margin-left: 8%;
+  font-size: 1.4rem;
+}
+.courseDetail article div:nth-child(1) span:nth-child(2) {
+  width: 20%;
+  text-align: center;
+}
+.courseDetail article div:nth-child(2) {
+  height: 75%;
+}
+.courseDetail article div:nth-child(2) ul {
+  height: 100%;
+  list-style: none;
+}
+.courseDetail article div:nth-child(2) li {
+  display: flex;
+  height: 20%;
+  align-items: center;
+}
+.courseDetail article div:nth-child(2) li span:nth-child(1) {
+  margin: auto;
+  font-size: 2rem;
+}
+.courseDetail article div:nth-child(2) li span:nth-child(2) {
+  width: 75%;
+  font-size: 1.5rem;
+  color: #767676;
+}
+.courseDetail article div:nth-child(3) {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #e3e3e3;
+}
+.courseDetail article div:nth-child(3) span {
+  width: 50%;
+  font-size: 1.8rem;
+  text-align: center;
+}
+/* 删除图标 */
+.icon-bin:before {
+  content: "\e9ac";
+  color: #fd1843;
+}
+/* 编辑图标 */
+.icon-pencil:before {
+  content: "\e905";
+  color: #2879ff;
+}
+
+
+.editCourseInfo {
+    width: 100%;
+}

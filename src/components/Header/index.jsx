@@ -18,7 +18,7 @@ export default class Header extends Component {
           <span className="icon-plus"></span>
           <span className="icon-arrow-down"></span>
           <span className="icon-redo2"></span>
-          <span className="icon-list2"></span>
+          <span className="icon-equalizer"></span>
         </div>
       </header>
     );
