@@ -1,26 +1,38 @@
 import React, { Component } from "react";
+import AddCourse from "../AddCourse";
+import Setting from "../Setting";
 import "./index.css";
 export default class Header extends Component {
+  addCourse() {
+    this.AddCourse.showStatus();
+  }
+  setting() {
+    this.Setting.showStatus();
+  }
   render() {
     return (
-      <header className="header">
-        <ul>
-          <li>
-            <span id="year">2021</span>/<span id="month">10</span>/
-            <span id="date">1</span>
-          </li>
-          <li>
-            <span id="weekNum">非本周</span>
-            <span id="weekDay">周日</span>
-          </li>
-        </ul>
-        <div>
-          <span className="icon-plus"></span>
-          <span className="icon-arrow-down"></span>
-          <span className="icon-redo2"></span>
-          <span className="icon-equalizer"></span>
-        </div>
-      </header>
+      <div>
+        <header className="header">
+          <ul>
+            <li>
+              <span id="year">2021</span>/<span id="month">10</span>/
+              <span id="date">1</span>
+            </li>
+            <li>
+              <span id="weekNum">非本周</span>
+              <span id="weekDay">周日</span>
+            </li>
+          </ul>
+          <div>
+            <span className="icon-plus" onClick={() => this.addCourse()}></span>
+            <span className="icon-arrow-down"></span>
+            <span className="icon-redo2"></span>
+            <span className="icon-equalizer" onClick={() => this.setting()}></span>
+          </div>
+        </header>
+        <AddCourse ref={(Component) => (this.AddCourse = Component)} />
+        <Setting ref={(Component) => (this.Setting = Component)} />
+      </div>
     );
   }
   componentDidMount() {

@@ -1,0 +1,181 @@
+.addCourse {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  visibility: hidden;
+  overflow: auto;
+  background-color: #fff;
+}
+.addCourse.active {
+  visibility: visible;
+}
+.addCourse header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6%;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  z-index: 5;
+  background-color: #fff;
+}
+.addCourse header span:nth-child(1) {
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+}
+.addCourse header span:nth-child(1) span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin: 36% 30%;
+  border-left: 3px solid #666666;
+  border-bottom: 3px solid #666666;
+  transform: rotate(45deg);
+}
+.addCourse header span:nth-child(2) {
+  width: 70%;
+  color: #757575;
+}
+.addCourse header span:nth-child(3) {
+  width: 20%;
+  text-align: center;
+  color: #fa6376;
+}
+.addCourse div.replaceheader {
+  width: 100%;
+  height: 6%;
+}
+
+.addCourse div.classname {
+  width: 100%;
+  height: 30%;
+  /* background-color: rgb(255, 200, 200); */
+}
+.addCourse div.classname ul {
+  width: 100%;
+  height: 100%;
+}
+.addCourse div.classname ul li {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+}
+.addCourse div.classname ul li span:nth-child(1) {
+  width: 20%;
+  text-align: center;
+  font-size: 2rem;
+}
+.icon-menu:before {
+  content: "\e9bd";
+  color: #16aea1;
+}
+.icon-eyedropper:before {
+  content: "\e90a";
+  color: #2154ff;
+}
+.icon-flag:before {
+  content: "\e9cc";
+  color: #1d89e4;
+}
+.icon-file-text2:before {
+  content: "\e926";
+  color: #fdd734;
+}
+.addCourse div.classname ul li input {
+  background: none;
+  outline: none;
+  border: 0px;
+}
+.addCourse div.classname {
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.details {
+  width: 100%;
+  height: 40%;
+  background-color: #fff;
+}
+.details div:nth-child(1) {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details div:nth-child(1) span:nth-child(1) {
+  margin-left: 7%;
+  font-size: 1.4rem;
+}
+.details div:nth-child(1) span:nth-child(2) {
+  width: 20%;
+  text-align: center;
+}
+.details div:nth-child(2) {
+  height: 80%;
+}
+.details div:nth-child(2) ul {
+  height: 100%;
+  list-style: none;
+}
+.details div:nth-child(2) li {
+  display: flex;
+  height: 23%;
+  align-items: center;
+}
+.details div:nth-child(2) li span:nth-child(1) {
+  width: 20%;
+  text-align: center;
+  font-size: 2rem;
+}
+.details .icon-calendar:before {
+  content: "\e953";
+  color: #16ad9e;
+}
+/* 节数图标 */
+.details .icon-clock:before {
+  content: "\e94e";
+  color: #ffa722;
+}
+/* 授课老师图标 */
+.details .icon-user-tie:before {
+  content: "\e976";
+  color: #1571d6;
+}
+/* 上课地点图标 */
+.details .icon-location2:before {
+  content: "\e948";
+  color: #f53d3d;
+}
+.details div:nth-child(2) li span:nth-child(2) {
+  width: 80%;
+  font-size: 1.5rem;
+  color: #767676;
+}
+.details div:nth-child(2) li input {
+  background: none;
+  outline: none;
+  border: 0px;
+}
+.incButton {
+  position: fixed;
+  right: 5%;
+  bottom: 3%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+  background-color: #fa6277;
+}
+.incButton span.icon-plus:before {
+  content: "\ea0a";
+  color: #fff;
+}

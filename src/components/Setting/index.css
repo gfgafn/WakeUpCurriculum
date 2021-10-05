@@ -1,0 +1,203 @@
+.setting {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  /* background-color: rgb(236, 113, 113); */
+  visibility: hidden;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: auto;
+}
+.setting.active {
+  visibility: visible;
+}
+.setting header {
+  height: 40%;
+}
+.setting article {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.currentSchedule {
+  width: 90%;
+  height: 70%;
+  margin: auto;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+}
+.currentSchedule ul {
+  list-style: none;
+}
+.currentSchedule div:nth-child(1) {
+  height: 40%;
+}
+.currentSchedule div:nth-child(1) p:nth-child(1) {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  /* background-color: rgb(209, 121, 121); */
+}
+.currentSchedule div:nth-child(1) p:nth-child(1) span {
+  padding: 5%;
+}
+.currentSchedule div:nth-child(1) p:nth-child(1) span:nth-child(2) {
+  color: #ef677f;
+}
+.currentSchedule div:nth-child(1) p:nth-child(2) {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(33, 163, 214); */
+}
+.currentSchedule div:nth-child(1) p:nth-child(2) span {
+  display: inline-block;
+  width: 90%;
+  height: 40%;
+  /* margin: auto; */
+  background-color: #fed9e0;
+  border-radius: 20px;
+}
+.currentSchedule div:nth-child(1) p:nth-child(2) span span {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  background-color: #fa6277;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 20px;
+}
+.currentSchedule div:nth-child(1) p:nth-child(2) span span span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background-color: #fff;
+}
+.currentSchedule div:nth-child(2) {
+  height: 60%;
+}
+.currentSchedule div:nth-child(2) div:nth-child(1) {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  /* background-color: rgb(44, 231, 185); */
+}
+.currentSchedule div:nth-child(2) div:nth-child(1) span {
+  padding: 5%;
+}
+.currentSchedule div:nth-child(2) div:nth-child(1) span:nth-child(1) {
+  color: #707271;
+  width: 40%;
+}
+.currentSchedule div:nth-child(2) div:nth-child(1) span:nth-child(n + 2) {
+  color: #ef677f;
+}
+.currentSchedule div:nth-child(2) ul {
+  width: 90%;
+  height: 75%;
+  margin: auto;
+  display: flex;
+  overflow: auto;
+  /* background-color: rgb(214, 20, 20); */
+}
+.currentSchedule div:nth-child(2) ul li {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  /* background-color: rgb(245, 38, 124); */
+  padding: 2% 2%;
+  text-align: center;
+}
+.currentSchedule div:nth-child(2) ul li span:nth-child(1) {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+
+  background-color: #959595;
+}
+.currentSchedule div:nth-child(2) ul li span:nth-child(2) {
+  padding: 5%;
+  font-size: 1.3rem;
+  color: #707271;
+}
+.currentSchedule .icon-cog:before {
+  color: #fff;
+  content: "\e994";
+}
+
+.settingType {
+  width: 90%;
+  height: 40%;
+  margin: 5% auto;
+  /* bottom: 5%; */
+  border-radius: 7px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+}
+.settingType {
+  color: #757575;
+}
+.settingType ul {
+  height: 100%;
+  list-style: none;
+}
+.settingType ul li {
+  width: 25%;
+  height: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  /* display: inline-block; */
+  float: left;
+  /* background-color: rgb(155, 195, 241); */
+}
+
+.settingType ul li span {
+  display: block;
+}
+.settingType ul li span:nth-child(1) {
+  padding: 10%;
+  font-size: 2rem;
+}
+.settingType .icon-clock:before {
+  content: "\e94e";
+}
+.settingType .icon-image:before {
+  content: "\e90d";
+}
+.settingType .icon-table2:before {
+  content: "\ea71";
+}
+.settingType .icon-question:before {
+  content: "\ea09";
+}
+.settingType .icon-info:before {
+  content: "\ea0c";
+}
+.settingType .icon-twitch:before {
+  content: "\ea9f";
+}
+.settingType .icon-cog:before {
+  content: "\e994";
+}

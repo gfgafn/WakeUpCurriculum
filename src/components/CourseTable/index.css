@@ -1,5 +1,6 @@
 .courseTable {
   margin-top: 14%;
+  width: 100%;
 }
 table {
   /* border: 1px solid purple; */
@@ -24,15 +25,17 @@ thead th:nth-child(n + 2) {
   font-weight: 700;
 }
 tbody tr td:nth-child(1) {
-    font-weight: 600;
+  font-weight: 600;
 }
 tbody tr td:nth-child(1) p:nth-child(1) {
-    font-weight: 700;
+  font-weight: 700;
 }
 .course {
-  border-radius: 5px;
-  background-color: #ff4952;
   color: #fff;
+  text-align: left;
+  vertical-align: top;
+  border-radius: 4px;
+  background-color: #ff4952;
 }
 .courseDetail {
   position: fixed;
@@ -61,29 +64,29 @@ tbody tr td:nth-child(1) p:nth-child(1) {
   align-items: center;
 }
 /* X号图标 */
-.icon-cross:before {
+.courseDetail .icon-cross:before {
   content: "\ea0f";
   font-weight: 100;
   font-size: 0.6rem;
   color: #757575;
 }
 /* 周数图标 */
-.icon-calendar:before {
+.courseDetail .icon-calendar:before {
   content: "\e953";
   color: #16ad9e;
 }
 /* 节数图标 */
-.icon-clock:before {
+.courseDetail .icon-clock:before {
   content: "\e94e";
   color: #ffa722;
 }
 /* 授课老师图标 */
-.icon-user-tie:before {
+.courseDetail .icon-user-tie:before {
   content: "\e976";
   color: #1571d6;
 }
 /* 上课地点图标 */
-.icon-location2:before {
+.courseDetail .icon-location2:before {
   content: "\e948";
   color: #f53d3d;
 }
@@ -137,9 +140,4 @@ tbody tr td:nth-child(1) p:nth-child(1) {
 .icon-pencil:before {
   content: "\e905";
   color: #2879ff;
-}
-
-
-.editCourseInfo {
-    width: 100%;
 }

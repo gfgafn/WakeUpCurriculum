@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import AddCourse from "../AddCourse";
 import "./index.css";
 
 export default class CourseTable extends Component {
-  showCourseDetail(){
-    this.CourseDetail.test();
-  }
   render() {
     return (
       <div className="courseTable">
@@ -68,11 +66,21 @@ export default class CourseTable extends Component {
             </tr>
           </tbody>
         </table>
-        <CourseDetail ref={(el) => {this.CourseDetail = el} } />
+        <CourseDetail ref={(Component) => (this.CourseDetail = Component)} />
       </div>
     );
   }
   componentDidMount() {
+    this.calScheduleTime();
+    const allCourse = document.getElementsByClassName("course");
+    for (let i = 0; i < allCourse.length; i++) {
+      allCourse.item(i).onclick = () => {
+        this.CourseDetail.showStatus();
+        // console.log(allCourse.item(i));
+      };
+    }
+  }
+  calScheduleTime() {
     let beginTimeHour = 8;
     let beginTimeMin = 0;
     let intervalTimeMin = 45;
@@ -85,7 +93,7 @@ export default class CourseTable extends Component {
     const lateBreak = 60;
     let courseNum = 12;
     let beginTimeHourArr = [];
-      let endTimeHourArr = [];
+    let endTimeHourArr = [];
     let beginTimeMinMoment = [];
     let endTimeMinMoment = [];
     for (let i = 1; i <= courseNum; i++) {
@@ -201,29 +209,17 @@ export default class CourseTable extends Component {
     //   `${endTimeHourArr}:${endTimeMinMoment}`)
     //   }
     //     }
-      
-      
+
     // }
-    const allCourse = document.getElementsByClassName("course");
-    for (let i = 0; i < allCourse.length; i++) {
-      allCourse.item(i).onclick = () => {
-        this.CourseDetail.showCourseDetail();
-        console.log(allCourse.item(i));
-        
-      };
-    }
   }
 }
 class CourseDetail extends Component {
-  test() {
-    console.log("success")
+  showStatus() {
+    const courseDetail = document.getElementById("courseDetail");
+    courseDetail.classList.toggle("active");
   }
-  showCourseDetail() {
-    const courseDetail = document.getElementById('courseDetail')
-    courseDetail.classList.toggle('active')
-  }
-  showEditCourseInfo() {
-    this.EditCourseInfo.showStatus();
+  editCourseInfo() {
+    this.AddCourse.showStatus();
   }
   render() {
     return (
@@ -231,7 +227,10 @@ class CourseDetail extends Component {
         <article>
           <div>
             <span>应用光学</span>
-            <span className="icon-cross" onClick={() => this.showCourseDetail()}></span>
+            <span
+              className="icon-cross"
+              onClick={() => this.showStatus()}
+            ></span>
           </div>
           <div>
             <ul>
@@ -255,27 +254,14 @@ class CourseDetail extends Component {
           </div>
           <div>
             <span className="icon-bin"></span>
-            <span className="icon-pencil" onClick={() => {this.showEditCourseInfo()}}></span>
+            <span
+              className="icon-pencil"
+              onClick={() => this.editCourseInfo()}
+            ></span>
           </div>
         </article>
-        <EditCourseInfo ref={(el) => {this.EditCourseInfo = el} } />
+        <AddCourse ref={(Component) => (this.AddCourse = Component)} />
       </div>
     );
   }
 }
-class EditCourseInfo extends Component {
-  showStatus() {
-    console.log(1)
-    const editCourseInfo = document.getElementById('editCourseInfo')
-    editCourseInfo.classList.toggle('active')
-  }
-  render() {
-    return(
-      <div id="editCourseInfo"className="editCourseInfo">
-        <div></div>
-        <div></div>
-      </div>
-    )
-  }
-}
-  
