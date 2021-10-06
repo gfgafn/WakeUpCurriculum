@@ -31,7 +31,7 @@ export default class Header extends Component {
           </div>
         </header>
         <AddCourse ref={(Component) => (this.AddCourse = Component)} />
-        <Setting ref={(Component) => (this.Setting = Component)} />
+        <Setting ref={(Component) => (this.Setting = Component)} history={this.props.history} />
       </div>
     );
   }

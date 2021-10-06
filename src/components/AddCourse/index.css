@@ -32,8 +32,8 @@
   width: 1rem;
   height: 1rem;
   margin: 36% 30%;
-  border-left: 3px solid #666666;
-  border-bottom: 3px solid #666666;
+  border-left: 2px solid #666666;
+  border-bottom: 2px solid #666666;
   transform: rotate(45deg);
 }
 .addCourse header span:nth-child(2) {

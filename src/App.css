@@ -1,6 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  /* 清除超链接点击高亮 */
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: none;
 }
 html {
   font-size: 10px;

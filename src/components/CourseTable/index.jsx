@@ -6,7 +6,7 @@ export default class CourseTable extends Component {
   render() {
     return (
       <div className="courseTable">
-        <table className="">
+        <table id="courseTable">
           <thead>
             <tr>
               <th scope="col">
@@ -43,7 +43,7 @@ export default class CourseTable extends Component {
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="courseTableBody">
             <tr>
               <td className="schedule">
                 <p>1</p>
@@ -196,21 +196,20 @@ export default class CourseTable extends Component {
       endTimeHourArr[i] = beginTimeHour + Math.floor(endTimeMinArr[i] / 60);
       endTimeMinMoment[i] =
         endTimeMinArr[i] - 60 * Math.floor(endTimeMinArr[i] / 60);
+
+      let courseTableBody = document.getElementById("courseTableBody");
+      let tr = document.createElement("tr")
+      courseTableBody.appendChild(tr);
+      for (let i = 0; i < 7; i++) {
+        let td = document.createElement("td")
+        tr.appendChild(td)      
+      }      
       // console.log(i, beginTimeMinArr[i], beginTimeHourArr[i], endTimeMinArr[i], endTimeHourArr[i]);
       // console.log(
       //   `${beginTimeHourArr[i]}:${beginTimeMinMoment[i]}`,
       //   `${endTimeHourArr[i]}:${endTimeMinMoment[i]}`
       // );
     }
-    // for(let beginTimeHour of beginTimeHourArr){
-    //   for(let  beginTimeMin of beginTimeMinMoment){
-    //     for(let  endTime of endTimeHourArr){
-    //       console.log(`${beginTimeHour}:${beginTimeMin}`,
-    //   `${endTimeHourArr}:${endTimeMinMoment}`)
-    //   }
-    //     }
-
-    // }
   }
 }
 class CourseDetail extends Component {

@@ -172,6 +172,9 @@
   float: left;
   /* background-color: rgb(155, 195, 241); */
 }
+.settingType ul a {
+  color: #757575;
+}
 
 .settingType ul li span {
   display: block;
@@ -200,4 +203,7 @@
 }
 .settingType .icon-cog:before {
   content: "\e994";
+}
+.settingType .icon-user:before {
+  content: "\e971";
 }

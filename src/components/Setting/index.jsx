@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import Login from "../../Pages/Login";
 import "./index.css";
 
 export default class Setting extends Component {
@@ -9,7 +11,7 @@ export default class Setting extends Component {
   render() {
     return (
       <div id="setting" className="setting">
-        <header></header>
+        <header onClick={() => this.showStatus()}></header>
         <article>
           <section className="currentSchedule">
             <div>
@@ -85,13 +87,21 @@ export default class Setting extends Component {
                 <span className="icon-cog"></span>
                 <span>全局设置</span>
               </li>
-              <li>
-                <span className=""></span>
-                <span></span>
-              </li>
+              <NavLink to="/login">
+                <li
+                  onClick={() => {
+                    this.Login.showStatus();
+                    this.showStatus();
+                  }}
+                >
+                  <span className="icon-user"></span>
+                  <span id="username">登录</span>
+                </li>
+              </NavLink>
             </ul>
           </section>
         </article>
+        <Login ref={(Component) => (this.Login = Component)} />
       </div>
     );
   }
