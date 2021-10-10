@@ -54,7 +54,7 @@ export default class Login extends Component {
           <li>
             <input
               type="password"
-              placeholder="请输入密码"
+              placeholder="密码"
               onChange={(e) => this.getValue(e, "password")}
             ></input>
           </li>

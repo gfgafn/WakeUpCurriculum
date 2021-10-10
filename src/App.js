@@ -1,8 +1,8 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import CourseTable from "./components/CourseTable";
-import Register from "./Pages/Register";
-import Login from "./Pages/Login/index";
+import Register from "./pages/Register";
+import Login from "./pages/Login/index";
 import "./App.css";
 
 function App() {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import Login from "../../Pages/Login";
+import Login from "../../pages/Login";
 import "./index.css";
 
 export default class Setting extends Component {

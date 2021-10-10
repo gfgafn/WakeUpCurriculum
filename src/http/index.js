@@ -15,13 +15,19 @@ $http.interceptors.request.use((config) => {
 
 // 响应拦截
 $http.interceptors.response.use((response) => {
-  let { data } = response;
+  let { config, data } = response;
   console.log("Axios-http中的respone", response);
   console.log("Axios-http中的response.data", data);
   if (data.success || data.code === 200) {
-    return data;
+    if (config.url === "/getCoursetable") {
+      localStorage.setItem("data", JSON.stringify(data.data));
+      // console.log(typeof data.data);
+      // console.log(localStorage.getItem("data"));
+    } else {
+      return data;
+    }
   } else {
-    Promise.reject(data)
+    Promise.reject(data);
     // return data;
   }
 });
